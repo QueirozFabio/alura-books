@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -39,8 +40,68 @@
             <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
             <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
         </section>
+        <section class="carrossel">
+            <h2 class="carrossel__titulo">Novos lançamentos</h2>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="/assets/ApacheKafka.svg" alt="Livro sobre apache e spring boot de alura books"></div>
+                <div class="swiper-slide"><img src="/assets/Liderança.svg" alt="Livro sobre liderança em desing da alura books"></div>
+                <div class="swiper-slide"><img src="/assets/Javascript.svg" alt="Livro sobre javascript da alura books"></div>
+                <div class="swiper-slide"><img src="/assets/Guia Front-end.svg" alt="Livro sobre Frontend da alura books"></div>
+                <div class="swiper-slide"><img src="/assets/Portugol.svg" alt="Livro sobre Portugol da alura books"></div>
+                <div class="swiper-slide"><img src="/assets/Acessibilidade.svg" alt="Livro sobre Acessibilidade da alura books"></div>
+                </div>
+                            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="card">
+                <!-- 1º linha-->
+                <div class="card__descricao">
+                    <!-- 1º coluna-->
+                    <div class="descricao">
+                        <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                        <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                        <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                    </div>
+                    <!-- 2º coluna-->
+                    <img src="/assets/Angular.svg" alt="Imagem angular" class="descricao__imagem">
+                </div>
+
+                <!-- 2º linha-->
+                 <div class="card__botoes">
+                    <!--1º coluna-->
+                    <ul class="botoes">
+                        <li class="botoes__item"><img src="/assets/Favoritos.svg" alt="Favoritar livros"></li>
+                        <li class="botoes__item"><img src="/assets/Compras.svg" alt="Adicionar ao carrinho de compras"></li>
+                    </ul>
+                    <!-- 2º coluna-->
+                     <a href="#" class="botoes__ancora">Saiba mais</a>
+                 </div>
+            </div>
+        </section>
+
+        
     </main>
 
     <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.swiper', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets'
+        }
+      });
+    </script>
 </body>
 </html>
